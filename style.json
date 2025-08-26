@@ -1,7 +1,7 @@
 {
   "version": 8,
   "name": "Pastel Map with Texture",
-  "sprite": "https://raw.githubusercontent.com/henrysumm/DIS-Map/main/sprite", 
+  "sprite": "https://raw.githubusercontent.com/henrysumm/DIS-Map/main/sprite",
   "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
   "sources": {
     "mapbox": {
