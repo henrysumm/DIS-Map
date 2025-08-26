@@ -33,7 +33,7 @@
       "source": "mapbox",
       "source-layer": "landuse",
       "type": "fill",
-      "minzoom": 10,
+      "minzoom": 0,
       "paint": {
         "fill-pattern": "land-pattern",
         "fill-opacity": 1
@@ -55,9 +55,9 @@
       "source-layer": "road",
       "type": "line",
       "filter": ["all",
-      ["in", "class", "motorway", "trunk"],
-      [">=", "lanes", 2]
-        ],
+        ["in", "class", "motorway", "trunk"],
+        [">=", "lanes", 2]
+      ],
       "paint": {
         "line-color": "#ffffff",
         "line-width": [
