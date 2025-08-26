@@ -1,7 +1,7 @@
 {
   "version": 8,
-  "name": "Pastel Map with Texture",
-  "sprite": "https://raw.githubusercontent.com/henrysumm/DIS-Map/main/sprite", 
+  "name": "Stockholm Clean Map",
+  "sprite": "https://henrysumm.github.io/DIS-Map/sprite",
   "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
   "sources": {
     "mapbox": {
@@ -22,9 +22,10 @@
       "source": "mapbox",
       "source-layer": "water",
       "type": "fill",
+      "minzoom": 0,
       "paint": {
         "fill-pattern": "water-pattern",
-        "fill-opacity": 0.9
+        "fill-opacity": 1
       }
     },
     {
@@ -32,9 +33,10 @@
       "source": "mapbox",
       "source-layer": "landuse",
       "type": "fill",
+      "minzoom": 10,
       "paint": {
         "fill-pattern": "land-pattern",
-        "fill-opacity": 0.6
+        "fill-opacity": 1
       }
     },
     {
@@ -48,20 +50,24 @@
       }
     },
     {
-      "id": "roads",
+      "id": "major-roads",
       "source": "mapbox",
       "source-layer": "road",
       "type": "line",
+      "filter": ["all",
+      ["in", "class", "motorway", "trunk"],
+      [">=", "lanes", 2]
+        ],
       "paint": {
         "line-color": "#ffffff",
         "line-width": [
           "interpolate",
           ["linear"],
           ["zoom"],
-          5, 0.5,
-          10, 1.5,
-          15, 3,
-          18, 5
+          5, 2,
+          10, 4,
+          15, 8,
+          18, 12
         ]
       }
     }
